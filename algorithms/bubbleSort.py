@@ -1,5 +1,4 @@
 import time
-from colours import YELLOW, BLUE 
 
 def bubble_sort(data, drawData, timeTick):
     size = len(data)
@@ -7,8 +6,8 @@ def bubble_sort(data, drawData, timeTick):
         for j in range(size - i - 1):
             if data[j] > data[j+1]:
                 data[j], data[j+1] = data[j+1], data[j]
-                drawData(data, [YELLOW if x == j or x == j+1 else BLUE for x in range(len(data))])
+                drawData(data, ['#F7E806' if x == j or x == j+1 else '#0CA8F6' for x in range(len(data))])
                 time.sleep(timeTick)
 
-    drawData(data, [BLUE for x in range(len(data))])
+    drawData(data, ['#0CA8F6' for x in range(len(data))])
     
